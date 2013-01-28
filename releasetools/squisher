@@ -94,10 +94,10 @@ rm -rf $REPACK/ota/recovery
 # Determine what to name the new signed package
 REALDATE=`date -u +%Y%m%d`
 
-if [ -f $ANDROID_BUILD_TOP/vendor/cm/LICENSE ];
+if [ -f $ANDROID_BUILD_TOP/vendor/cos/LICENSE ];
 then
-MODVERSION=`sed -n -e'/ro\.cm\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
-OUTFILE=$OUT/cm-$MODVERSION.zip
+MODVERSION=`sed -n -e'/ro\.cos\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
+OUTFILE=$OUT/cos-$MODVERSION.zip
 echo MODVERSION: $MODVERSION
 elif [ -f $ANDROID_BUILD_TOP/vendor/aokp/vendorsetup.sh ];
 then
